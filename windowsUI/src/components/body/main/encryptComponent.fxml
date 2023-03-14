@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="165.0" minWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.body.main.EncryptController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="260.0" prefWidth="260.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="83.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="260.0" prefWidth="258.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="90.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="75.0" minHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="140.0" minHeight="140.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true">
+         <content>
+            <StackPane>
+               <children>
+                  <TextField fx:id="messageToEncryptTF" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressedActionListener" onKeyTyped="#onKeyTypedActionListener" promptText="insert your message here" />
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+      <VBox alignment="CENTER" minHeight="90.0" minWidth="83.0" spacing="15.0" GridPane.columnIndex="1">
+         <children>
+            <Button fx:id="processButton" mnemonicParsing="false" onAction="#processButtonActionListener" text="Process" />
+            <Button fx:id="doneButton" mnemonicParsing="false" onAction="#doneButtonActionListener" text="Done" />
+         </children>
+      </VBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" GridPane.columnIndex="2">
+         <content>
+            <StackPane>
+               <children>
+                  <Label fx:id="encryptedMessageLabel" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" />
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+      <StackPane minWidth="83.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonActionListener" text="Clear" />
+         </children>
+      </StackPane>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" GridPane.rowIndex="1">
+         <children>
+            <ToggleButton fx:id="autoStateButton" onAction="#stateButtonActionListener" selected="true" text="auto" />
+            <ToggleButton fx:id="manualStateButton" onAction="#stateButtonActionListener" text="manual" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="resetButton" mnemonicParsing="false" text="Reset Code" />
+         </children>
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+      </HBox>
+      <FlowPane fx:id="keyBoardFlowPane" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+      <FlowPane fx:id="bulbsBoardFlowPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+   </children>
+</GridPane>

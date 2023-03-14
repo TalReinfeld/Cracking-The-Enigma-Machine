@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="287.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.body.details.EngineDetailsController">
+   <top>
+      <VBox alignment="CENTER" minHeight="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Engine Details">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="30.0" vgrow="NEVER" />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane>
+               <children>
+                  <Label text="ABC" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1">
+               <children>
+                  <Label text="Reflectors" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2">
+               <children>
+                  <Label text="Rotors" />
+               </children>
+            </StackPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" minWidth="80.0" GridPane.rowIndex="1">
+               <content>
+                  <StackPane>
+                     <children>
+                        <FlowPane fx:id="abcPane" hgap="10.0" maxHeight="200.0" vgap="10.0" StackPane.alignment="CENTER" />
+                     </children>
+                  </StackPane>
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="50.0" minWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <content>
+                  <HBox fx:id="reflectorsPane" alignment="CENTER_LEFT" spacing="10.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="10.0" minHeight="230.0" minWidth="115.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <content>
+                  <HBox fx:id="rotorsPane" alignment="CENTER" spacing="10.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

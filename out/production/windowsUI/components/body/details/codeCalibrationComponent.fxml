@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.body.details.CodeCalibrationController">
+   <bottom>
+      <HBox alignment="CENTER" fillHeight="false" minHeight="50.0" minWidth="280.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="randomButton" minHeight="40.0" minWidth="120.0" mnemonicParsing="false" text="Random Code" />
+            <Button fx:id="manualSetButton" minHeight="40.0" minWidth="120.0" mnemonicParsing="false" onAction="#manualSetCodeActionListener" text="Set Code" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="115.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" minWidth="85.0">
+               <content>
+                  <VBox fx:id="reflectorPane" alignment="CENTER" fillWidth="false" minWidth="80.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <VBox alignment="TOP_CENTER" GridPane.columnIndex="2">
+               <children>
+                  <fx:include fx:id="plugBoardComponent" source="../machine/plugBoardComponent.fxml" />
+                  <HBox alignment="CENTER" minHeight="31.0" minWidth="185.0" spacing="10.0">
+                     <children>
+                        <ChoiceBox fx:id="leftPlugChoiceBox" />
+                        <Button fx:id="connectPlugsButton" minWidth="60.0" mnemonicParsing="false" onAction="#connectPlugsButtonActionListener" text="&lt; - &gt;" />
+                        <ChoiceBox fx:id="rightPlugChoiceBox" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="230.0" minWidth="115.0" GridPane.columnIndex="1">
+               <content>
+                  <HBox fx:id="rotorsPane" alignment="CENTER_LEFT" fillHeight="false" minHeight="225.0" nodeOrientation="RIGHT_TO_LEFT" spacing="10.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <VBox alignment="CENTER" fillWidth="false" minHeight="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label minWidth="127.0" text="Code Calibaration">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="initialConfigurationLabel" />
+         </children>
+      </VBox>
+   </top>
+   <padding>
+      <Insets left="-1.0" />
+   </padding>
+</BorderPane>

@@ -1,0 +1,5 @@
+.cell {
+    -fx-border-color: blue; 
+    -fx-stroke-width: 6; 
+    -fx-background-color: linear-gradient(#ff6600, #cc6600);
+}

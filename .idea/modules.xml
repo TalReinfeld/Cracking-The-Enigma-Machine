@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/system/BruteForce/BruteForce.iml" filepath="$PROJECT_DIR$/system/BruteForce/BruteForce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarckingTheEnigma.iml" filepath="$PROJECT_DIR$/CarckingTheEnigma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/DTOS/DTOS.iml" filepath="$PROJECT_DIR$/system/DTOS/DTOS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consoleUI/consoleUI.iml" filepath="$PROJECT_DIR$/consoleUI/consoleUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/engine/engine.iml" filepath="$PROJECT_DIR$/system/engine/engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enigmamachine/enigmamachine.iml" filepath="$PROJECT_DIR$/enigmamachine/enigmamachine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/windowsUI/windowsUI.iml" filepath="$PROJECT_DIR$/windowsUI/windowsUI.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,7 @@
+.rectangle{
+  -fx-fill: black;
+}
+
+.selected {
+  -fx-fill: pink;
+}

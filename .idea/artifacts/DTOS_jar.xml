@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DTOS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DTOS_jar</output-path>
+    <root id="archive" name="DTOS.jar">
+      <element id="module-output" name="DTOS" />
+      <element id="module-output" name="enigmamachine" />
+      <element id="module-output" name="BruteForce" />
+      <element id="module-output" name="engine" />
+    </root>
+  </artifact>
+</component>

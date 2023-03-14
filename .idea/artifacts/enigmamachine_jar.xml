@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="enigmamachine:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/enigmamachine_jar</output-path>
+    <root id="archive" name="enigmamachine.jar">
+      <element id="module-output" name="enigmamachine" />
+    </root>
+  </artifact>
+</component>
